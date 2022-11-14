@@ -69,11 +69,9 @@ function Basic() {
 
   const loginHandler = (e) => {
     e.preventDefault();
-    console.log(username);
-    console.log(password);
     const newUser = {
       userName: username,
-      password: password,
+      password
     };
     localStorage.setItem("refresh","load");  
 

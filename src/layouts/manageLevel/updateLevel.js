@@ -51,11 +51,11 @@ import { useSelector } from "react-redux";
 // };
 
 function UpdateLevel() {
-  const [brand, setBrand] = useState("");
+  const [, setBrand] = useState("");
   const [levelDetail, setLevelDetail] = useState("");
   const [brandList, setBrandList] = useState([]);
   const [levelCode, setLevelCode] = useState("");
-  const [levelName, setLevelName] = useState("");
+  const [, setLevelName] = useState("");
   const [brandName, setBrandName] = useState("");
   const { levelId } = useParams();
   const user = useSelector((state) => state.auth.login?.currentUser);

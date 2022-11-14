@@ -43,5 +43,7 @@ export const logoutUser = async (dispatch, navigate) => {
   try {
     dispatch(loginSuccess(null));
     navigate("/sign-in");
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 };
