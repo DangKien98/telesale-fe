@@ -107,6 +107,7 @@ function UpdateStore() {
         setStorePhone(response.data.phoneNumber);
         setEmail(response.data.email);
         setAddress(response.data.address);
+        // eslint-disable-next-line no-unneeded-ternary
         setStatus(response.data.status === 1 ? true : false);
         console.log(response.data);
       })
@@ -145,8 +146,8 @@ function UpdateStore() {
         {
           name: storeName,
           status: status === true ? 1 : 0,
-          address: address,
-          email: email,
+          address,
+          email,
           phoneNumber: storePhone,
           description: "abc",
           brandId: storeBrand,

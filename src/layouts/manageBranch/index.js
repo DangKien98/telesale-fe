@@ -54,6 +54,7 @@ function table() {
   const [successSB, setSuccessSB] = useState(false);
   const openSuccessSB = () => setSuccessSB(true);
   const closeSuccessSB = () => setSuccessSB(false);
+  const [branch, setBranch] = useState()
 
   const user = useSelector((state) => state.auth.login?.currentUser);
 
@@ -195,7 +196,7 @@ function table() {
           <Grid item xs={12} sm={6} lg={3}>
             <MDButton
               onClick={() => {
-                handleDelete(bra.no);
+                handleDelete(sto.no);
                 openSuccessSB();
               }}
             >

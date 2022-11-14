@@ -11,11 +11,10 @@ import MDButton from "components/MDButton";
 import MDTypography from "components/MDTypography";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
-import CancelIcon from "@mui/icons-material/Cancel";
 import jwtDecode from "jwt-decode";
-import { FormControl, IconButton, MenuItem, Select, TextField } from "@mui/material";
+import { IconButton, TextField } from "@mui/material";
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
 import { DatePicker } from "antd";
@@ -23,7 +22,6 @@ import "./customer.css";
 import moment from "moment";
 import { useSelector } from "react-redux";
 import DataTable from "examples/Tables/DataTable";
-import { CheckBox } from "@mui/icons-material";
 import MDSnackbar from "components/MDSnackbar";
 
 // import Select from "../../formUI/Select";
@@ -31,33 +29,14 @@ import MDSnackbar from "components/MDSnackbar";
 // console.log(process.env);
 // const BASE_URL = process.env.BASE_URL || "http://localhost:3000";
 
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "80%",
-  height: "80%",
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-  display: "flex",
-  gap: "20px",
-  flexDirection: "column",
-};
-
 function OrderItem() {
   const [product, setProduct] = useState([]);
   const [customerOrder, setCustomerOrder] = useState([]);
   const user = useSelector((state) => state.auth.login?.currentUser);
-  const [store, setStore] = useState([]);
+  const [ setStore] = useState([]);
   const [cart, setCart] = useState([]);
   const [customer, setCustomer] = useState([]);
   const [totalAmount, setTotalAmount] = useState(0);
-  const [destination, setDestination] = useState("");
-  const [storeId, setStoreId] = useState("");
-  const [arrival, setArrival] = useState("");
   const [note, setNote] = useState("");
   const [date, setBirthDate] = useState(new Date());
   const { customerId } = useParams();
@@ -65,6 +44,7 @@ function OrderItem() {
   const openSuccessSB = () => setSuccessSB(true);
   const closeSuccessSB = () => setSuccessSB(false);
   const navigate = useNavigate();
+  const currencyFormat = (num) => `${num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")  }đ`
   const renderSuccessSB = (
     <MDSnackbar
       color="success"
@@ -79,24 +59,13 @@ function OrderItem() {
   );
 
   const currentUser = jwtDecode(user.tokenString);
-  console.log(currentUser);
-  console.log(currentUser.BrandId);
   const [brandId, setBrandId] = useState(currentUser.BrandId);
-  const destinationHandler = (e) => {
-    setDestination(e.target.value);
-  };
-  const arrivalHandler = (e) => {
-    setArrival(e.target.value);
-  };
+  
   const noteChangeHandler = (e) => {
     setNote(e.target.value);
   };
-  const dateChange = (date, dateString) => {
-    console.log(date, dateString);
+  const dateChange = (dateString) => {
     setBirthDate(dateString);
-  };
-  const storeChangeHandler = (e) => {
-    setStoreId(e.target.value);
   };
 
   const axiosConfigCustomer = {
@@ -131,7 +100,7 @@ function OrderItem() {
           dataUserID: customer.id,
           userId: customer.userId,
           amount: totalAmount,
-          note: note,
+          note,
           expectedDate: date,
         },
         {
@@ -240,7 +209,7 @@ function OrderItem() {
       const updateItem = {
         ...existingCartItem,
         amount: Number(existingCartItem.price) + existingCartItem.price,
-        quantity: quantity,
+        quantity,
       };
       updateItems = [...cart];
       updateItems[existingCartItemIndex] = updateItem;
@@ -260,7 +229,7 @@ function OrderItem() {
         {
           cartId: customerOrder.id,
           productId: pro.id,
-          quantity: quantity,
+          quantity,
         },
         {
           headers: {
@@ -294,6 +263,7 @@ function OrderItem() {
         { Header: "", accessor: "remove", align: "center" },
       ],
       rows: [
+        // eslint-disable-next-line no-unsafe-optional-chaining
         ...cart?.map((item, index) => ({
           no: (
             <MDTypography variant="caption" color="text" fontWeight="medium">
@@ -369,7 +339,7 @@ function OrderItem() {
           ),
           add: (
             <IconButton size="small">
-              <AddIcon color="info" onClick={handleClick.bind(null, pro)}>
+              <AddIcon color="info" onClick={handleClick(null, pro)}>
                 .
               </AddIcon>
             </IconButton>
@@ -381,10 +351,8 @@ function OrderItem() {
 
   const { columns, rows } = table();
   const { columns: cartColumns, rows: cartRows } = tableCart();
-  const name = customerOrder.firstName + " " + customerOrder.lastName;
-  function currencyFormat(num) {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "đ";
-  }
+  const name = `${customerOrder.firstName} + " " + ${customerOrder.lastName}`;
+  
   return (
     <DashboardLayout>
       <MDBox pt={1} pb={3}>
@@ -423,7 +391,7 @@ function OrderItem() {
                         onClick={() => {
                           openSuccessSB();
                           sendOrderHandler();
-                          sendProductHandler();
+                          // sendProductHandler();
                         }}
                       >
                         Đặt hàng
@@ -461,7 +429,7 @@ function OrderItem() {
                             fullWidth
                             hiddenLabel
                             label=" "
-                            disabled={true}
+                            disabled
                             InputLabelProps={{ shrink: false }}
                             sx={{ marginTop: 1 }}
                             inputProps={{
@@ -497,7 +465,7 @@ function OrderItem() {
                             // hiddenLabel
                             variant="outlined"
                             color="secondary"
-                            disabled={true}
+                            disabled
                             fullWidth
                             hiddenLabel
                             label=" "
@@ -537,7 +505,7 @@ function OrderItem() {
                             variant="outlined"
                             color="secondary"
                             fullWidth
-                            disabled={true}
+                            disabled
                             hiddenLabel
                             label=" "
                             InputLabelProps={{ shrink: false }}
@@ -664,7 +632,7 @@ function OrderItem() {
                             onChange={noteChangeHandler}
                           />
                         </MDBox>
-                        <MDBox></MDBox>
+                        {/* <MDBox></MDBox> */}
                       </Grid>
                     </Grid>
                   </MDBox>

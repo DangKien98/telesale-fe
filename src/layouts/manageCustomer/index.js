@@ -30,7 +30,7 @@ import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import DataTable from "examples/Tables/DataTable";
 
 import axios from "axios";
-import { useCallback, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Box, Icon, IconButton } from "@mui/material";
 import MDSnackbar from "components/MDSnackbar";
 import { Link } from "react-router-dom";
@@ -64,25 +64,18 @@ function ManageCustomer() {
   const [customer, setCustomer] = useState([]);
 
   const [open, setOpen] = useState(false);
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [address, setAddress] = useState("");
-  const [email, setEmail] = useState("");
-
-  const [gender, setGender] = useState("");
   const [date, setDate] = useState("");
-  const [level, setLevel] = useState("");
-  const [channel, setChannel] = useState("");
   const [listChannel, setListChannel] = useState([]);
   const [listLevel, setListLevel] = useState([]);
-  const [userAll, setUserAll] = useState([]);
+  const [, setUserAll] = useState([]);
   const [successSB, setSuccessSB] = useState(false);
-  const [excelFile, setExcelFile] = useState([]);
+  const [, setExcelFile] = useState([]);
   const openSuccessSB = () => setSuccessSB(true);
   const closeSuccessSB = () => setSuccessSB(false);
+  const user = useSelector((state) => state.auth.login?.currentUser);
 
   const readExcel = (file) => {
+    
     const promise = new Promise((resolve, reject) => {
       const fileReader = new FileReader();
       fileReader.readAsArrayBuffer(file);
@@ -105,6 +98,7 @@ function ManageCustomer() {
     });
     promise.then((d) => {
       console.log(d);
+      // eslint-disable-next-line array-callback-return
       d.map((excel) => {
         axios
           .post(
@@ -161,7 +155,6 @@ function ManageCustomer() {
       bgWhite
     />
   );
-  const user = useSelector((state) => state.auth.login?.currentUser);
   const currentUser = jwtDecode(user.tokenString);
 
   const axiosConfigUserAll = {

@@ -15,13 +15,12 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 
-import { DatePicker, Typography } from "antd";
+import { DatePicker } from "antd";
 import "./customer.css";
 import moment from "moment";
 import { useSelector } from "react-redux";
 import {
   HttpTransportType,
-  HubConnection,
   HubConnectionBuilder,
   HubConnectionState,
   LogLevel,
@@ -53,26 +52,11 @@ const device = new clvDevice(config);
 //     console.log("We're on a phone call!");
 //   });
 // };
-const style = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  width: "80%",
-  height: "80%",
-  bgcolor: "background.paper",
-  border: "2px solid #000",
-  boxShadow: 24,
-  p: 4,
-  display: "flex",
-  gap: "20px",
-  flexDirection: "column",
-};
+
 
 function UpdateCustomer() {
-  const [manager, setManager] = useState("");
-  const [open, setOpen] = useState(false);
-  const [historyCall, setHistoryCall] = useState("");
+  const [, setOpen] = useState(false);
+  const [, setHistoryCall] = useState("");
   const [customerDetail, setCustomerDetail] = useState("");
   const { customerId } = useParams();
   const [allUser, setAllUser] = useState([]);
@@ -86,15 +70,13 @@ function UpdateCustomer() {
   const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
   const [birthDate, setBirthday] = useState("");
-  const [brandId, setBrandId] = useState("");
+  const [, setBrandId] = useState("");
   const [connection, setConnection] = useState();
-  const [data, setData] = useState();
+  const [, setData] = useState();
   const user = useSelector((state) => state.auth.login?.currentUser);
   const [orderDetail, setOrderDetail] = useState([]);
   const url = "https://telesysapi227.amazingtech.vn/signalr";
-  const handleDateChange = (date) => {
-    setBirthday(date);
-  };
+  
   const handleFirstName = (e) => {
     setFirstName(e.target.value);
   };
@@ -141,11 +123,11 @@ function UpdateCustomer() {
       .patch(
         `http://oggycute.tplinkdns.com:31080/api/customers/${customerId}`,
         {
-          firstName: firstName,
-          lastName: lastName,
-          phoneNumber: phoneNumber,
-          email: email,
-          address: address,
+          firstName,
+          lastName,
+          phoneNumber,
+          email,
+          address,
           dayOfBith: birthDate,
           gender: Number(customerGender),
           totalOrder: customerDetail.totalOrder,
@@ -166,7 +148,7 @@ function UpdateCustomer() {
       .then(
         (response) => {
           console.log(response);
-          navigate("/manageCustomer");
+          // navigate("/manageCustomer");
         },
         (error) => {
           console.log(error);
@@ -294,7 +276,7 @@ function UpdateCustomer() {
   }, []);
 
   useEffect(() => {
-    if (connection && connection?.state != HubConnectionState.Connected) {
+    if (connection && connection?.state !== HubConnectionState.Connected) {
       connection.start().then(() => {
         connection.on("SendMessage", (data) => {
           setData(data.message);
@@ -315,9 +297,7 @@ function UpdateCustomer() {
   const handleOpen = () => {
     setOpen(true);
   };
-  const handleClose = () => {
-    setOpen(false);
-  };
+  
   const handleManagerChange = (e) => {
     setManagerUser(e.target.value);
   };
@@ -328,11 +308,9 @@ function UpdateCustomer() {
   const handleLevelChange = (e) => {
     setLevelDetail(e.target.value);
   };
-  const handleChange = (e) => {};
-  const updateHandler = () => {};
 
   function currencyFormat(num) {
-    return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,") + "đ";
+    return `${num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")  }đ`;
   }
 
   return (

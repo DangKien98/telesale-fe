@@ -58,6 +58,7 @@ import ManageStaff from "layouts/manageStaff";
 
 const check = localStorage.getItem("report");
 
+// eslint-disable-next-line import/no-mutable-exports
 let routes = [];
 if(check === "report"){
   routes = [
