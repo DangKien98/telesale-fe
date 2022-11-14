@@ -1,0 +1,451 @@
+{
+  "customer": [
+    {
+      "no": 1,
+      "firstname": "Nguyễn",
+      "lastname": "A",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 2,
+      "firstname": "Đặng",
+      "lastname": "B",
+      "phone": "0812951889",
+      "address": "01 Trần Phú",
+      "email": "dangkien@gmail.com",
+      "date": "10/8/2022",
+      "sex": "Nam",
+      "brand": "Coca"
+    },
+    {
+      "no": 3,
+      "firstname": "Phạm",
+      "lastname": "Phát",
+      "phone": "07581235091",
+      "address": "63 Nguyễn Du",
+      "email": "phatpham@gmail.com",
+      "date": "5/1/2022",
+      "sex": "Nam",
+      "brand": "Audi"
+    },
+    {
+      "no": 4,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 5,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 6,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 7,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 8,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 9,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 10,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 11,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 12,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 13,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    },
+    {
+      "no": 14,
+      "firstname": "Nguyễn",
+      "lastname": "Đăng",
+      "phone": "0983476100",
+      "address": "01 Lê Thánh Tôn",
+      "email": "dangnguyen@gmail.com",
+      "date": "20/8/2020",
+      "sex": "Nam",
+      "brand": "Pepsi"
+    }
+  ],
+  "level": [
+    {
+      "no": 1,
+      "code": "L2",
+      "name": "Khách mua hàng",
+      "brand": "Pepsi",
+      "total": 2,
+      "status": "Đã bật"
+    },
+    {
+      "no": 2,
+      "code": "L2",
+      "name": "Khách mua hàng",
+      "brand": "Pepsi",
+      "total": 2,
+      "status": "Đã bật"
+    },
+    {
+      "no": 3,
+      "code": "L2",
+      "name": "Khách mua hàng",
+      "brand": "Pepsi",
+      "total": 2,
+      "status": "Đã bật"
+    },
+    {
+      "no": 4,
+      "code": "L2",
+      "name": "Khách mua hàng",
+      "brand": "Pepsi",
+      "total": 2,
+      "status": "Đã bật"
+    },
+    {
+      "no": 5,
+      "code": "L2",
+      "name": "Khách mua hàng",
+      "brand": "Pepsi",
+      "total": 2,
+      "status": "Đã bật"
+    },
+    {
+      "no": 6,
+      "code": "L2",
+      "name": "Khách mua hàng",
+      "brand": "Pepsi",
+      "total": 2,
+      "status": "Đã bật"
+    }
+  ],
+  "branch": [
+    {
+      "no": 1,
+      "shopCode": "CH02",
+      "shopName": "CH201",
+      "brand": "Pepsico",
+      "address": "01 Lê Thánh Tôn"
+    },
+    {
+      "no": 2,
+      "shopCode": "CH02",
+      "shopName": "CH201",
+      "brand": "Pepsico",
+      "address": "01 Lê Thánh Tôn"
+    },
+    {
+      "no": 3,
+      "shopCode": "CH02",
+      "shopName": "CH201",
+      "brand": "Pepsico",
+      "address": "01 Lê Thánh Tôn"
+    },
+    {
+      "no": 4,
+      "shopCode": "CH02",
+      "shopName": "CH201",
+      "brand": "Pepsico",
+      "address": "01 Lê Thánh Tôn"
+    },
+    {
+      "no": 5,
+      "shopCode": "CH02",
+      "shopName": "CH201",
+      "brand": "Pepsico",
+      "address": "01 Lê Thánh Tôn"
+    },
+    {
+      "no": 6,
+      "shopCode": "CH02",
+      "shopName": "CH201",
+      "brand": "Pepsico",
+      "address": "01 Lê Thánh Tôn"
+    },
+    {
+      "no": 7,
+      "shopCode": "CH02",
+      "shopName": "CH201",
+      "brand": "Pepsico",
+      "address": "01 Lê Thánh Tôn"
+    }
+  ],
+  "customerResource": [
+    { "no": 1, "source": "MN20", "fromCustomer": "Đăng", "updated": "29/10/2020", "subChannel": 1 },
+    { "no": 2, "source": "MN20", "fromCustomer": "Đăng", "updated": "29/10/2020", "subChannel": 1 },
+    { "no": 3, "source": "MN20", "fromCustomer": "Đăng", "updated": "29/10/2020", "subChannel": 1 },
+    { "no": 4, "source": "MN20", "fromCustomer": "Đăng", "updated": "29/10/2020", "subChannel": 1 },
+    { "no": 5, "source": "MN20", "fromCustomer": "Đăng", "updated": "29/10/2020", "subChannel": 1 },
+    { "no": 6, "source": "MN20", "fromCustomer": "Đăng", "updated": "29/10/2020", "subChannel": 1 },
+    { "no": 7, "source": "MN20", "fromCustomer": "Đăng", "updated": "29/10/2020", "subChannel": 1 }
+  ],
+  "customerPlace": [
+    {
+      "no": 1,
+      "channel": "MK20",
+      "channelCustomer": "Đăng",
+      "foreRevenue": 2000000,
+      "updated": "29/10/2020"
+    },
+    {
+      "no": 2,
+      "channel": "MK20",
+      "channelCustomer": "Đăng",
+      "foreRevenue": 2000000,
+      "updated": "29/10/2020"
+    },
+    {
+      "no": 3,
+      "channel": "MK20",
+      "channelCustomer": "Đăng",
+      "foreRevenue": 2000000,
+      "updated": "29/10/2020"
+    },
+    {
+      "no": 4,
+      "channel": "MK20",
+      "channelCustomer": "Đăng",
+      "foreRevenue": 2000000,
+      "updated": "29/10/2020"
+    },
+    {
+      "no": 5,
+      "channel": "MK20",
+      "channelCustomer": "Đăng",
+      "foreRevenue": 2000000,
+      "updated": "29/10/2020"
+    },
+    {
+      "no": 6,
+      "channel": "MK20",
+      "channelCustomer": "Đăng",
+      "foreRevenue": 2000000,
+      "updated": "29/10/2020"
+    },
+    {
+      "no": 7,
+      "channel": "MK20",
+      "channelCustomer": "Đăng",
+      "foreRevenue": 2000000,
+      "updated": "29/10/2020"
+    }
+  ],
+  "location": [
+    {
+      "no": 1,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "district": "29/10/2020",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 2,
+      "code": "MK20",
+      "areaCustomer": "Đăng",
+      "address": 2000000,
+      "district": "29/10/2020",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 3,
+      "code": "MK20",
+      "areaCustomer": "Đăng",
+      "address": 2000000,
+      "district": "29/10/2020",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 4,
+      "code": "MK20",
+      "areaCustomer": "Đăng",
+      "address": 2000000,
+      "district": "29/10/2020",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 5,
+      "code": "MK20",
+      "areaCustomer": "Đăng",
+      "address": 2000000,
+      "district": "29/10/2020",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 6,
+      "code": "MK20",
+      "areaCustomer": "Đăng",
+      "address": 2000000,
+      "district": "29/10/2020",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 7,
+      "code": "MK20",
+      "areaCustomer": "Đăng",
+      "address": 2000000,
+      "district": "29/10/2020",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    }
+  ],
+  "district": [
+    {
+      "no": 1,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 2,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 3,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 4,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 5,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 6,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    },
+    {
+      "no": 7,
+      "code": "MK20",
+      "areaCustomer": "KV1",
+      "address": "20 Thích Bửu Đăng",
+      "city": "Yên Bái",
+      "status": "Đã bật"
+    }
+  ],
+  "category": [
+    { "no": 1, "nameCategory": "A", "description": "Hàng ngon", "total": 20, "brand": "Pepsi" },
+    { "no": 2, "nameCategory": "C", "description": "Hàng ngon", "total": 20, "brand": "Pepsi" },
+    { "no": 3, "nameCategory": "B", "description": "Hàng ngon", "total": 20, "brand": "Pepsi" },
+    { "no": 4, "nameCategory": "Z", "description": "Hàng ngon", "total": 20, "brand": "Pepsi" },
+    { "no": 5, "nameCategory": "DM20", "description": "Hàng ngon", "total": 20, "brand": "Pepsi" },
+    { "no": 6, "nameCategory": "DM20", "description": "Hàng ngon", "total": 20, "brand": "Pepsi" },
+    { "no": 7, "nameCategory": "DM20", "description": "Hàng ngon", "total": 20, "brand": "Pepsi" }
+  ]
+}

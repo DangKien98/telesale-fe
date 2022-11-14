@@ -1,0 +1,69 @@
+@import 'antd/dist/antd.css';
+
+  .orderHistory{
+    display: table;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 13px;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+  }
+
+  .orderHistory thead tr{
+    background-color: #f2eded;
+    color: #000000;
+    font-weight: bold;
+  }
+
+  .orderHistory, th, td {
+    text-align: center;
+    padding: 2px 3px;
+  }
+
+
+  .orderHistory tbody tr{
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .orderHistory tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+  }
+
+  .orderHistory tbody tr:last-child{
+    border-bottom: 2px solid #f2eded;
+  }
+
+
+  .ant-picker-input > input {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    padding: 4px 11px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 13.5px;
+    line-height: 1.5715;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #d9d9d9;
+    border-radius: 2px;
+    transition: all 0.3s;
+    flex: auto;
+    min-width: 1px;
+    height: auto;
+    padding: 0;
+    background: transparent;
+    border: 0;
+  }
+
+  .brandSelector .ant-select .ant-select-selector {
+    border-radius: 5px;
+    height: 40px;
+    align-items: center;
+  }
+
+  .reportDate{
+    border-radius: 5px;
+  }
